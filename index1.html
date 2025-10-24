@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Thay đổi màu nền</title>
+<style>
+  body {
+    background-color: #d2c1b2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #container {
+    background-color: #e0d4c4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2e4f6d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #3b6a8e;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <p>Đoạn 1</p>
+    <p>Đoạn 2</p>
+    <button id="editBtn">Sửa văn bản</button>
+  </div>
+
+<script>
+  document.getElementById('editBtn').addEventListener('click', function() {
+    // Lấy tất cả các phần tử con của container
+    const container = document.getElementById('container');
+    // Duyệt tất cả các đoạn văn (p)
+    const paragraphs = container.querySelectorAll('p');
+    paragraphs.forEach(function(p) {
+      // Lấy nội dung hiện tại
+      const currentText = p.innerHTML;
+      // Thêm "(đã sửa)" vào nội dung cũ
+      p.innerHTML = currentText + " (đã sửa)";
+    });
+  });
+</script>
+</body>
+</html>

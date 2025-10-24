@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Bài tập 2: Tạo trang web như hình</title>
+<style>
+ body {
+    background-color: #d2c1b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 0;
+  }
+  #colorContainer {
+    display: flex;
+    gap: 0px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #2e4f6d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #3b6a8e;
+  }
+</style>
+</head>
+<body>
+  <div id="colorContainer">
+    <input type="text" id="colorInput" placeholder="Nhập màu" />
+    <button onclick="changeBackgroundColor()">Áp dụng</button>
+  </div>
+<p id="demo"></p>
+<script>
+  function changeBackgroundColor() {
+    const color = document.getElementById('colorInput').value;
+    document.body.style.backgroundColor = color;
+  }
+  {
+  var x = document.getElementById("colorContainer").style.color;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
